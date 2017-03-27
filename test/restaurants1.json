@@ -1,0 +1,33 @@
+[
+  {
+    "name" : "Restaurant A",
+    "rating" : "5",
+    "maxMeals" : "40",
+    "numUnrestricted": "36",
+    "numVegetarian": "4",
+    "numGluten_free": "0",
+    "numNutFree": "0",
+    "numFishFree": "0"
+  },
+  {
+    "name" : "Restaurant B",
+    "rating" : "3",
+    "maxMeals" : "100",
+    "numUnrestricted": "60",
+    "numVegetarian": "20",
+    "numGlutenFree": "20",
+    "numNutFree": "0",
+    "numFishFree": "0"
+  },
+  {
+    "name" : "Restaurant C",
+    "rating" : "2",
+    "maxMeals" : "20",
+    "numUnrestricted": "5",
+    "numVegetarian": "0",
+    "numGlutenFree": "5",
+    "numNutFree": "5",
+    "numFishFree": "5"
+  }
+
+]
