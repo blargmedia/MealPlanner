@@ -12,6 +12,7 @@ public class Lunch {
     private int numFishFree;
 
     public Lunch() {
+        this.totalMeals = 0;
         this.numUnrestricted = 0;
         this.numVegetarian = 0;
         this.numGlutenFree = 0;
@@ -19,7 +20,8 @@ public class Lunch {
         this.numFishFree = 0;
     }
 
-    public Lunch(int numU, int numV, int numG, int numN, int numF) {
+    public Lunch(int total, int numU, int numV, int numG, int numN, int numF) {
+        this.totalMeals = total;
         this.numUnrestricted = numU;
         this.numVegetarian = numV;
         this.numGlutenFree = numG;
@@ -31,48 +33,24 @@ public class Lunch {
         return totalMeals;
     }
 
-    public void setTotalMeals(int total) {
-        this.totalMeals = total;
-    }
-
     public int getNumUnrestricted() {
         return numUnrestricted;
-    }
-
-    public void setNumUnrestricted(int numU) {
-        this.numUnrestricted = numU;
     }
 
     public int getNumVegetarian() {
         return numVegetarian;
     }
 
-    public void setNumVegetarian(int numV) {
-        this.numVegetarian = numV;
-    }
-
     public int getNumGlutenFree() {
         return numGlutenFree;
-    }
-
-    public void setNumGlutenFree(int numG) {
-        this.numGlutenFree = numG;
     }
 
     public int getNumNutFree() {
         return numNutFree;
     }
 
-    public void setNumNutFree(int numN) {
-        this.numNutFree = numN;
-    }
-
     public int getNumFishFree() {
         return numFishFree;
-    }
-
-    public void setNumFishFree(int numF) {
-        this.numFishFree = numF;
     }
 
 }
