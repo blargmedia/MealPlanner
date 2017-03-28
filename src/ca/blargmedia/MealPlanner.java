@@ -122,7 +122,6 @@ public class MealPlanner {
         String plan = "";
 
         // loop through the restaurants to fulfill the lunch order
-        // TODO: should refactor/genericize this
         for (int i = 0; i < r.size() && countTotalOrder > 0; i++) {
             plan += r.get(i).getName() + ":\n";
             if (r.get(i).getNumFishFree() > 0 && countFishFree > 0) {
@@ -132,25 +131,25 @@ public class MealPlanner {
                 plan += "  " + orderFishFree + " fish-free\n";
             }
             if (r.get(i).getNumNutFree() > 0 && countNutFree > 0) {
-                int orderNutFree = Math.min(r.get(i).getNumNutFree(), countNutFree); // whichever is smaller
+                int orderNutFree = Math.min(r.get(i).getNumNutFree(), countNutFree);
                 countNutFree -= orderNutFree;
                 countTotalOrder -= orderNutFree;
                 plan += "  " + orderNutFree + " nut-free\n";
             }
             if (r.get(i).getNumGlutenFree() > 0 && countGlutenFree > 0) {
-                int orderGlutenFree = Math.min(r.get(i).getNumGlutenFree(), countGlutenFree); // whichever is smaller
+                int orderGlutenFree = Math.min(r.get(i).getNumGlutenFree(), countGlutenFree);
                 countGlutenFree -= orderGlutenFree;
                 countTotalOrder -= orderGlutenFree;
                 plan += "  " + orderGlutenFree + " gluten-free\n";
             }
             if (r.get(i).getNumVegetarian() > 0 && countVegetarian > 0) {
-                int orderVegetarian = Math.min(r.get(i).getNumVegetarian(), countVegetarian); // whichever is smaller
+                int orderVegetarian = Math.min(r.get(i).getNumVegetarian(), countVegetarian);
                 countVegetarian -= orderVegetarian;
                 countTotalOrder -= orderVegetarian;
                 plan += "  " + orderVegetarian + " vegetarian\n";
             }
             if (r.get(i).getNumUnrestricted() > 0 && countUnrestricted > 0) {
-                int orderUnrestricted = Math.min(r.get(i).getNumUnrestricted(), countUnrestricted); // whichever is smaller
+                int orderUnrestricted = Math.min(r.get(i).getNumUnrestricted(), countUnrestricted);
                 countUnrestricted -= orderUnrestricted;
                 countTotalOrder -= orderUnrestricted;
                 plan += "  " + orderUnrestricted + " unrestricted\n";
