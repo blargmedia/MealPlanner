@@ -186,9 +186,11 @@ public class MealPlanner {
         if (args.length == 2) {
             restaurantFile = args[0];
             lunchFile = args[1];
-        } else {
+        } else if (args.length == 0) {
             restaurantFile = "./test/restaurants0.json";
             lunchFile = "./test/lunch0.json";
+        } else {
+            System.out.println("Usage: java MealPlanner <restaurant file> <lunch file>");
         }
         try {
             new MealPlanner(restaurantFile, lunchFile);
